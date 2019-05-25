@@ -132,7 +132,30 @@ public class SinglyLinkedList {
     }
 
     public Node inverseLinkList_head(Node p) {
-        Node head = new Node(9999, null);
+        Node pre = null;
+        Node curr = p;
+        while(curr != null) {
+            Node next = curr.next;
+            curr.next = pre;
+            pre = curr;
+            curr = next;
+        }
+        return pre;
+    }
+
+    public Node inverseLinkList(Node p) {
+        Node pre = null;
+        Node r = head;
+        Node next = null;
+
+        while(r != p) {
+            next = r.next;
+            r.next = pre;
+            pre = r;
+            r=next;
+        }
+        r.next = pre;
+        return r;
     }
 
     public void printAll() {
