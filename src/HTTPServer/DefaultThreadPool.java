@@ -1,6 +1,4 @@
-package WebServer;
-
-import HTTPServer.ThreadPool;
+package HTTPServer;
 
 import java.util.ArrayList;
 import java.util.Collections;
