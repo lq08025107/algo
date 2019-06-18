@@ -13,7 +13,7 @@ import java.net.Socket;
 /**
  * 6-21
  */
-public class SimpleHttpServer {
+public class SimpleHTTPServer {
     // ����HttpRequest���̳߳�
     static ThreadPool<HttpRequestHandler> threadPool = new DefaultThreadPool<HttpRequestHandler>(11);
     // SimpleHttpServer�ĸ�·��
@@ -24,13 +24,13 @@ public class SimpleHttpServer {
 
     public static void setPort(int port) {
         if (port > 0) {
-            SimpleHttpServer.port = port;
+            SimpleHTTPServer.port = port;
         }
     }
 
     public static void setBasePath(String basePath) {
         if (basePath != null && new File(basePath).exists() && new File(basePath).isDirectory()) {
-            SimpleHttpServer.basePath = basePath;
+            SimpleHTTPServer.basePath = basePath;
         }
     }
 
