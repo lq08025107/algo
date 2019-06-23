@@ -9,6 +9,8 @@ public class SemaphoreTest {
     private static Semaphore s = new Semaphore(10);
 
     public static void main(String[] args){
+        StringBuffer sb = new StringBuffer();
+        StringBuilder sb1 = new StringBuilder();
         for(int i = 0; i < THREAD_COUNT; i++) {
             threadPool.execute(new Runnable() {
                 @Override
