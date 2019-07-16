@@ -1,5 +1,7 @@
 package C07LinkedList;
 
+import java.util.List;
+
 /**
  *1）单链表的反转
  *2）链表中的环的检测
@@ -130,4 +132,7 @@ public class LinkedListAlgo {
 		}
 		return slow;
 	}
+
+
 }
+
